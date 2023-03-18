@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ramadan-challenge</string>
+    <string name="ramadan_kareem">Ramadan Kareem</string>
+    <string name="friday_march_17_2023">Friday, March 17, 2023</string>
+    <string name="fajr_4_30_am">Fajr - 4:30 AM</string>
+    <string name="dhuhr_12_30_pm">Dhuhr - 12:30 PM</string>
+    <string name="asr_3_30_pm">Asr - 3:30 PM</string>
+    <string name="maghrib_5_30_pm">Maghrib - 5:30 PM</string>
+    <string name="isha_7_30_pm">Isha - 7:30 PM</string>
 </resources>
