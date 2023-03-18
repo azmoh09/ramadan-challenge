@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:layoutDuringTransition="honorRequest">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="0"
+                motion:percentX="0.5"
+                motion:percentY="0.5" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousTwo"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+
+
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousThree"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+
+        </KeyFrameSet>
+        <OnClick motion:targetId="@+id/fanous" />
+
+
+
+    </Transition>
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/secnd"
+        motion:constraintSetStart="@id/end"
+        motion:duration="1000"
+        motion:layoutDuringTransition="honorRequest">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="0"
+                motion:percentX="0.5"
+                motion:percentY="0.5" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousTwo"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+
+
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousThree"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+
+        </KeyFrameSet>
+
+        <OnClick />
+
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/fanous"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fanousTwo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/fanousThree"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fanousThree"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintStart_toEndOf="@+id/fanous"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="116dp"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
+            android:layout_marginTop="60dp"
+            android:alpha="0" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/fanous"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fanousTwo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/fanousThree"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fanousThree"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintStart_toEndOf="@+id/fanous"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="1.0" />
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="116dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
+            android:alpha="1" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/secnd">
+
+        <Constraint
+            android:id="@+id/fanousTwo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/fanousThree"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/fanousThree"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="0dp"
+            motion:layout_constraintStart_toEndOf="@+id/fanous"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/fanous"
+            android:layout_width="135dp"
+            android:layout_height="120dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="116dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree" />
+        <Constraint
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="1.0" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/scrol">
+        <Constraint
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="1.0"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/fanous"
+            android:layout_width="135dp"
+            android:layout_height="120dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/fanousTwo"
+            android:layout_width="136dp"
+            android:layout_height="120dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/fanousThree"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/fanousThree"
+            android:layout_width="136dp"
+            android:layout_height="120dp"
+            motion:layout_constraintStart_toEndOf="@+id/fanous"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="116dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetEnd="@+id/scrol"
+        motion:constraintSetStart="@+id/secnd"
+        motion:duration="1000"
+        motion:layoutDuringTransition="honorRequest">
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="0"
+                motion:percentX="0.5"
+                motion:percentY="0.5" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanous"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+            <KeyCycle
+                android:translationX="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousTwo"
+                motion:percentX="0.5"
+                motion:percentY="0.5"
+                motion:waveOffset="1.0"
+
+
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/fanousThree"
+                motion:waveOffset="1.0"
+                motion:wavePeriod="0.5"
+                motion:waveShape="sin" />
+
+
+        </KeyFrameSet>
+
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:maxAcceleration="8000"
+            motion:maxVelocity="4"
+            motion:moveWhenScrollAtTop="true"
+            motion:touchAnchorId="@+id/scroll"
+            motion:touchAnchorSide="top" />
+        <OnClick />
+    </Transition>
+</MotionScene>
