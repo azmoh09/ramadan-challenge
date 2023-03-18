@@ -55,11 +55,10 @@
         <OnClick motion:targetId="@+id/fanous" />
 
 
-
     </Transition>
     <Transition
         motion:autoTransition="animateToEnd"
-        motion:constraintSetEnd="@+id/secnd"
+        motion:constraintSetEnd="@+id/second"
         motion:constraintSetStart="@id/end"
         motion:duration="1000"
         motion:layoutDuringTransition="honorRequest">
@@ -143,14 +142,13 @@
             motion:layout_constraintStart_toEndOf="@+id/fanous"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/imageView"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            android:layout_marginEnd="116dp"
-            motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
-            android:layout_marginTop="60dp"
+            motion:layout_editor_absoluteY="190dp"
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteX="76dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_title"
             android:alpha="0" />
+
 
     </ConstraintSet>
 
@@ -191,16 +189,17 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintVertical_bias="1.0" />
         <Constraint
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="116dp"
+            android:id="@+id/tv_title"
             motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/scroll"
             motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
-            android:alpha="1" />
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0" />
+
     </ConstraintSet>
-    <ConstraintSet android:id="@+id/secnd">
+    <ConstraintSet android:id="@+id/second">
 
         <Constraint
             android:id="@+id/fanousTwo"
@@ -226,14 +225,7 @@
             android:layout_height="120dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
-        <Constraint
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="116dp"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toBottomOf="@+id/fanousThree" />
+
         <Constraint
             android:id="@+id/scroll"
             android:layout_width="match_parent"
@@ -242,6 +234,15 @@
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintVertical_bias="1.0" />
+        <Constraint
+            android:id="@+id/tv_title"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/scroll"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0" />
 
 
     </ConstraintSet>
@@ -251,13 +252,13 @@
             android:id="@+id/scroll"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toBottomOf="@+id/imageView"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="1.0"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="16dp" />
+            motion:layout_constraintTop_toBottomOf="@+id/imageView"
+            motion:layout_constraintVertical_bias="1.0" />
         <Constraint
             android:id="@+id/fanous"
             android:layout_width="135dp"
@@ -278,17 +279,19 @@
             motion:layout_constraintStart_toEndOf="@+id/fanous"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="116dp"
+            android:id="@+id/tv_title"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintTop_toBottomOf="@+id/fanousThree" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/scroll"
+            motion:layout_constraintTop_toBottomOf="@+id/fanousThree"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="1" />
+
     </ConstraintSet>
     <Transition
         motion:constraintSetEnd="@+id/scrol"
-        motion:constraintSetStart="@+id/secnd"
+        motion:constraintSetStart="@+id/second"
         motion:duration="1000"
         motion:layoutDuringTransition="honorRequest">
         <KeyFrameSet>

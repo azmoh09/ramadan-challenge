@@ -34,6 +34,20 @@
         app:layout_constraintStart_toEndOf="@+id/fanous"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ramadan Kareem"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:textColor="#F3EBEB"
+        app:layout_constraintBottom_toTopOf="@+id/scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fanousThree" />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -44,7 +58,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -173,17 +186,6 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="116dp"
-        android:scaleType="fitXY"
-        android:background="@drawable/image_circle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fanousThree"
-        android:src="@drawable/img_ramadan" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
